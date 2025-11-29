@@ -11,6 +11,11 @@
     "devStart": "DEBUG=express:* nodemon app.js"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "@matter/main": "^0.15.6",
+    "express": "^5.1.0",
+    "jsdoc": "^4.0.5",
+    "matter-js": "^0.20.0",
+    "p5play": "^3.33.6",
+    "toxiclibsjs": "^0.3.3"
   }
 }

@@ -2,12 +2,22 @@
 let express = require('express');
 let fs = require('fs');
 let path = require('path');
-
 // Create the Express app
 let app = express();
 
+
 app.get('/images', (req,res) => {
     fs.readdir('public/images', (err, files) => {
+        if(err) {
+            res.status(500).send('Error reading files'); 
+        } else {
+            res.json({ files });
+        }
+    });
+});
+
+app.get('/Sound_Effects', (req,res) => {
+    fs.readdir('public/Sound_Effects', (err, files) => {
         if(err) {
             res.status(500).send('Error reading files'); 
         } else {
